@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href='style.css'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr' rel='stylesheet'/>
+<script src='conversor.js' defer></script>
+    <title>Conversor</title>
+</head>
+<body>
+  <div class='container'> 
+  
+  
+<div class='bloco'>
+<div class="topo">
+      <h1><i class="fas fa-key icone"></i> Conversor</h1>
+    </div>
+      <p>Este conversor é capaz de converter um texto qualquer em Cifra de Cesar e Base64. A Cifra de Cesar é também conhecida como a troca de Cesar e foi usado no Imperio Romano como uma forma de criptografia. A base 64 é uma das formas de criptografia usada na internet para transferência de dados. </p>
+
+  <textarea id="mensagem-string"  name="mensagem" rows="5" cols="30" placeholder='Seu código aqui'></textarea>
+  
+
+  <div class='conversor-container'>
+      <label for="selectbasic">Escolha a codificação:</label>
+      <div class="select">
+      <select id="selectbasic" onchange='mostraCampo(this)' name="selectbasic">
+        <option value="Selecione">Clique para selecionar</option>
+        <option value="Base64">Base 64</option>
+      <option value="Cesar">Cesar</option>
+      </select></div>
+      <!---- Div Oculta para incremento comeca aqui -->
+  <div id='entrada' style='display:none;'>
+
+     <label for="textinput">Selecione um número para incremento:</label>  
+    <input id='incremento-num' value='1' type="number">   
+  </div>
+  
+  <!--- Div Oculta acaba aqui -->
+ <div class='radios'>
+    <input type="radio" id="codificar" onchange='mostraBotaoCodificar(this)' name="cod" value="Codificar">
+    <label for="codificar">Codificar</label>
+
+    <input type="radio" id="decodificar" onchange='mostraBotaoDecodificar(this)' name="cod" value="Decodificar">
+    <label for="decodificar">Decodificar</label>
+</div>
+  <!--- resultado -->
+  <textarea readonly id="resultado"  name="resultado" rows="5" cols="30"></textarea>
+  <!--- resultado -->
+   <!--- Botãos ocultos -->
+   <div class='botao'>
+    <button type='button' id='botao-codificar'>Codificar Mensagem!</button>
+    <button id='botao-decodificar' style='display:none;'>Decodificar Mensagem!</button>
+  </div>
+  <!--- Botãos ocultos fim -->  
+</div>
+
+
+  </div>
+
+</div>
+</div>
+<footer>
+  <div class='copyright'>
+    Copyright - Gabriela Costa || 2021 - Criado para fins didáticos 
+  </div>
+</footer>
+</body>
+</html>
