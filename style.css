@@ -63,7 +63,7 @@ h1 {
 
 
 .container {
-    width: 50%;
+    max-width: 50%;
     border-radius: 2em;
     background-color: white;
     padding: 3em;
